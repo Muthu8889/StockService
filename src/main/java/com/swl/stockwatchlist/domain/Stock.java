@@ -1,14 +1,16 @@
 package com.swl.stockwatchlist.domain;
 
-public class Stock {
-	private int id;
+import java.io.Serializable;
+
+public class Stock implements Serializable{
+	private String id;
 	private String description;
 	private String date;
 	private String value;
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getDescription() {
@@ -29,6 +31,11 @@ public class Stock {
 	public void setValue(String value) {
 		this.value = value;
 	}
-	
-	
+	public Stock(String id, String description, String date, String value) {
+		super();
+		this.id = id;
+		this.description = description;
+		this.date = date;
+		this.value = value;
+	}	
 }
